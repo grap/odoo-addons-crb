@@ -31,12 +31,10 @@ Change the precisions names and values of some fields
 
 Functionality:
 --------------
-    * Add a new precision 'GRAP Purchase Unit Price', used in:
-        * stock_move.unit_price;
-        * account_invoice_line.price_unit;
-        * purchase_order_line.price_unit;
-    * Add a new precision 'GRAP Purchase Unit Discount', used in:
-        * account_invoice_line.discount;
+    * Change the precision of pos_order_line.qty, from fixed to 'Product UoS';
+        * So fix the problem of Pos Order created with 3 digit in Front Office,
+        but with 2 digit in Front Office, generating rounding bug and unpaid
+        Pos Order;
 
 Copyright, Authors and Licence:
 -------------------------------
