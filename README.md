@@ -4,4 +4,4 @@
 odoo-addons-crb
 ===============
 
-Specific modules for Croc BioBauges
+Specific modules for Croc BioBauges Association.
