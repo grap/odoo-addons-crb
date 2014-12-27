@@ -22,7 +22,7 @@
 
 {
     'name': 'CRB - Change Views',
-    'version': '1.0',
+    'version': '1.1',
     'category': 'CRB - Custom',
     'description': """
 Show / Hide / change views for users
@@ -30,7 +30,8 @@ Show / Hide / change views for users
 
 Functionality:
 --------------
-    * Empty module for the instance;
+    * Add a Products (Price) view;
+    * Add a Products (Category) view;
 
 Copyright, Authors and Licence:
 -------------------------------
@@ -42,9 +43,13 @@ Copyright, Authors and Licence:
     'website': 'http://www.grap.coop',
     'license': 'AGPL-3',
     'depends': [
-        'base',
+        'point_of_sale',
+        'product_taxes_group',
     ],
     'data': [
+        'view/view.xml',
+        'view/action.xml',
+        'view/menu.xml',
     ],
     'css': [
         'static/src/css/css.css'
