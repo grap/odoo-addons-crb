@@ -11,6 +11,12 @@ env:
 virtualenv:
   system_site_packages: true
 
+before_install:
+  - sudo pip install GitPython bzr
+  - sudo apt-get install bzr
+  - sudo pip install cairosvg
+  - sudo apt-get install wkhtmltopdf
+
 install:
   - git clone https://github.com/OCA/maintainer-quality-tools.git ${HOME}/maintainer-quality-tools
   - git clone https://github.com/grap/odoo-addons-misc.git $HOME/odoo-addons-misc -b 7.0
