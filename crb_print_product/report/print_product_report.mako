@@ -11,7 +11,6 @@
                 padding:0px;margin:0px;border:0px;overflow:hidden;
             }
             .barcode_container{
-                border:1px solid;
                 position:absolute;
             }
             .product_barcode{
