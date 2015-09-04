@@ -74,5 +74,15 @@ class print_product_type(Model):
 
     # Default values Section
     _defaults = {
+        'name': '/',
+        'row_qty': 10,
+        'column_qty': 3,
+        'label_width': 10,
+        'label_height': 5,
+        'product_name_width': 8,
+        'product_name_height': 4,
+        'product_name_font_size': 3,
+        'barcode_width': 8,
+        'barcode_height': 4,
         'sequence': 5,
     }

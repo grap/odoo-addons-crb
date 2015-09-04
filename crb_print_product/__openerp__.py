@@ -85,4 +85,7 @@ Copyright, Authors and Licence:
             'wkhtmltopdf',
         ],
     },
+    'demo': [
+        'demo/res_groups.yml',
+    ],
 }
