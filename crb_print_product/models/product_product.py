@@ -48,6 +48,7 @@ class product_product(Model):
                 fullpath = '/tmp/' + pp.ean13
                 EAN = barcode.get_barcode_class('ean13')
                 ean = EAN(pp.ean13)
+                print fullpath
                 fullpath = ean.save(fullpath)
                 f = open(fullpath, 'r')
                 output = StringIO.StringIO()
@@ -74,11 +75,12 @@ class product_product(Model):
             self, cr, uid, ids, context=None):
         EAN = barcode.get_barcode_class('ean13')
         pp_id = self.search(
-            cr, uid, [('ean13', 'like', '22%')],
+            cr, uid, [('ean13', '=like', '22%')],
             order='ean13 desc', limit=1, context=context)
         if not pp_id:
             ean13 = EAN('220000000000')
         else:
             pp = self.browse(cr, uid, pp_id[0], context=context)
+            print pp.name
             ean13 = EAN(str(int(pp.ean13[0:12]) + 1))
         return self.write(cr, uid, ids, {'ean13': ean13}, context=context)

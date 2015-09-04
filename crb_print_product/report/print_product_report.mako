@@ -11,19 +11,16 @@
                 padding:0px;margin:0px;border:0px;overflow:hidden;
             }
             .barcode_container{
-                background-color:yellow;
                 border:1px solid;
                 position:absolute;
             }
             .product_barcode{
                 position:relative;
-                background-color:red;
             }
 
             .product_name{
                 text-align:center;
                 position:relative;
-                background-color:blue;
             }
             
         </style>

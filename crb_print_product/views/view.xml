@@ -71,7 +71,7 @@
             <field name="inherit_id" ref="product.product_normal_form_view" />
             <field name="arch" type="xml">
                 <field name="ean13" position="after">
-                    <button name="generate_ean13" type="object" colspan="2" string="Generate EAN"/>
+                    <button name="generate_ean13" type="object" colspan="2" string="Generate EAN" attrs="{'invisible': [('ean13', '!=', False)]}"/>
                 </field>
                 <notebook position="inside">
                     <page string="EAN13">
