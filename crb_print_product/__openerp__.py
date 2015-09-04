@@ -21,9 +21,9 @@
 ##############################################################################
 
 {
-    'name': 'GRAP - Print Product',
+    'name': 'Croc Bauges - Print Product',
     'summary': 'Possibility to print EAN13 product',
-    'version': '0.1',
+    'version': '0.2',
     'category': 'Custom',
     'description': """
 Possibility to print product information
@@ -51,8 +51,10 @@ Limits / Roadmap
 
 
 * after V8 migration and CRB integration,
-  merge odoo-addons-misc/grap_print_product
-  and odoo-addons-grap/grap_change_print
+  merge:
+    * odoo-addons-crb/crb_print_product
+    * odoo-addons-crb/crb_change_print
+    * odoo-addons-grap/grap_change_print
 
 Copyright, Authors and Licence:
 -------------------------------
@@ -69,13 +71,18 @@ Copyright, Authors and Licence:
     ],
     'data': [
         'security/ir_model_access.yml',
-        'report/print_product_1_report.xml',
+        'report/print_product_report.xml',
         'views/view.xml',
         'views/action.xml',
         'views/menu.xml',
     ],
     'external_dependencies': {
-        'python': ['barcode', 'cairosvg'],
-        'bin': ['wkhtmltopdf'],
+        'python': [
+            'barcode',
+            'cairosvg',
+        ],
+        'bin': [
+            'wkhtmltopdf',
+        ],
     },
 }

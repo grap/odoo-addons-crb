@@ -1,8 +1,8 @@
 # -*- encoding: utf-8 -*-
 ##############################################################################
 #
-#    GRAP - Print Product module for Odoo
-#    Copyright (C) 2012-Today GRAP (http://www.grap.coop)
+#    Croc Bauges - Print Product module for Odoo
+#    Copyright (C) 2015-Today GRAP (http://www.grap.coop)
 #    @author Sylvain LE GAL (https://twitter.com/legalsylvain)
 #
 #    This program is free software: you can redistribute it and/or modify
@@ -20,10 +20,6 @@
 #
 ##############################################################################
 
-- !record {model: ir.model.access, id: ir_model_print_product_type_all}:
-    model_id: grap_print_product.model_print_product_type
-    name: Print Product Type Access
-    perm_read: true
-    perm_create: true
-    perm_write: true
-    perm_unlink: true
+from . import product_product
+from . import print_product_wizard
+from . import print_product_type

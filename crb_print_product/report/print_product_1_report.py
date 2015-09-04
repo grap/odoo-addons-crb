@@ -8,7 +8,7 @@ class report_webkit_html(report_sxw.rml_parse):
             cr, uid, name, context=context)
 
 report_sxw.report_sxw(
-    'report.print.product_1.report',
+    'report.print.product.report',
     'print.product.wizard',
-    'addons/grap_print_product/report/print_product_1_report.mako',
+    'addons/crb_print_product/report/print_product_report.mako',
     parser=report_webkit_html)

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- ********************************************************************** -->
-<!-- GRAP - Print Product module for Odoo                                   -->
+<!--Croc Bauges - Print Product module for Odoo                             -->
 <!-- Copyright (C) 2015-Today GRAP (http://www.grap.coop)                   -->
 <!-- @author Sylvain LE GAL (https://twitter.com/legalsylvain)              -->
 
@@ -86,7 +86,7 @@
                     <group colspan="2">
                         <group col="4" colspan="2">
                             <button icon="gtk-cancel" special="cancel" string="Cancel"/>
-                            <button name="%(report_print_product_1_report)d" string="Print" type="action" icon="gtk-print"/>
+                            <button name="%(report_print_product_report)d" string="Print" type="action" icon="gtk-print"/>
                        </group>
                     </group>
                 </form>
