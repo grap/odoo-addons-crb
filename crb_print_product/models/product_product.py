@@ -34,22 +34,28 @@ from openerp.osv import fields
 class product_product(Model):
     _inherit = 'product.product'
 
+    BARCODE_IMAGE_PATH = "/tmp/"
+
     # Fields Function Section
     def _get_ean13_image(
             self, cr, uid, ids, field_name, arg, context=None):
         res = {}
         for pp in self.browse(cr, uid, ids, context):
             if pp.ean13:
+                # Please dude, FIXME, make this value more dynamic
+                # and more 'windows compatible'
+                # even if we don't like windows a lot
+                fullpath = '/tmp/' + pp.ean13
                 EAN = barcode.get_barcode_class('ean13')
                 ean = EAN(pp.ean13)
-                fullname = ean.save(pp.ean13)
-                f = open(fullname, 'r')
+                fullpath = ean.save(fullpath)
+                f = open(fullpath, 'r')
                 output = StringIO.StringIO()
                 svg = f.read()
                 cairosvg.svg2png(
                     bytestring=svg, write_to=output, center_text=True, dpi=300)
                 res[pp.id] = base64.b64encode(output.getvalue())
-                os.remove(fullname)
+                os.remove(fullpath)
             else:
                 res[pp.id] = False
         return res
