@@ -19,7 +19,7 @@ virtualenv:
   system_site_packages: true
 
 before_install:
-  - sudo pip install GitPython bzr cairosvg barcode
+  - sudo pip install GitPython bzr cairosvg pyBarcode
   - sudo apt-get install bzr wkhtmltopdf
 
 install:
